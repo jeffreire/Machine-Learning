@@ -19,9 +19,7 @@ x = int(input('Informe o total de sucesso que desejas: '))
 while True:
     r = input('Voce sabe a probabilidade de {} sucessos acontecerem? (S) para sim e (N) para nao: '.format(x))
     if r == 'N':
-        # obj = int(input('informe a quantidade de objetos de pesquisa: '))
-        i = float('inf')
-        p = probability(i)
+        p = probability(int(input('informe a quantidade de objetos de pesquisa: ')))
         input('Certo, entao vamos calcular!') 
         input('A probabilidade de sucesso acontecer {} vezez é de {}%'.format(x,p))
         break
