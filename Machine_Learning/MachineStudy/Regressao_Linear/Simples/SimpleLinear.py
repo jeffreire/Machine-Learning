@@ -2,13 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# # arquivo = pd.read_csv('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine Learning/MachineStudy/Salary_Data.csv')
-# # x = arquivo.iloc[:,0]
-# # y = arquivo.iloc[:,1]
-#dados anos
+"""arquivo = pd.read_csv('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine Learning/MachineStudy/Salary_Data.csv')
+x = arquivo.iloc[:,0]
+y = arquivo.iloc[:,1]"""
+
 x = [ 1.1, 1.3, 1.5, 2.2, 2.9, 3.0, 3.2, 3.2, 3.7, 3.9, 4.0, 4.0, 4.1, 4.5, 4.9, 5.1,
 5.3, 6.0, 6.8, 7.1, 4.5, 7.9, 8.2, 8.7, 9.0, 9.6, 10.3, 10.5 ]
-#dados salario
+
 y = [ 39343.00, 46205.00, 37731.00, 39891.00, 56642.00,  60150.00,
 54445.00, 64445.00, 57189.00, 63218.00, 55794.00, 56957.00, 57081.00, 61111.00,
 67938.00, 66029.00, 83088.00, 93940.00, 91738.00, 98273.00, 61111.00,
@@ -40,7 +40,7 @@ for p in x_t:
     y_pred.append(s)
 
 plt.scatter(x, y)
-# plt.plot(x, y, color='black')
+"""plt.plot(x, y, color='black')"""
 plt.plot(x_t, y_t, color='black') 
 plt.plot(x_t, y_pred, color='red')
 plt.xlabel("Idade")
@@ -48,15 +48,16 @@ plt.ylabel("Salary")
 plt.show()
 
 #Para obter os dados dentro de um arquivo e nao adicionar los em forma manual
-# t = open('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine Learning/MachineStudy/Salary_Data.csv', 'r')
-# tl = [i.strip().split(',') for i in t]
-# x = []
-# y = []
+"""t = open('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine Learning/MachineStudy/Salary_Data.csv', 'r')
+tl = [i.strip().split(',') for i in t]
+x = []
+y = []"""
 
-# for i in tl:
-#     if i != ['YearsExperience', 'Salary']:
-#         x.append(i[0])
-#         y.append(float(i[1]))
+"""for i in tl:
+    if i != ['YearsExperience', 'Salary']:
+        x.append(i[0])
+        y.append(float(i[1]))"""
 
-# print(x, '\n', '*'*30, '\n', y)
-# t.close()
+"""
+print(x, '\n', '*'*30, '\n', y)
+t.close()"""
