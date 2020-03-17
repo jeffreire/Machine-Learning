@@ -1,4 +1,5 @@
 import pandas as pd
+import datetime as dt
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -47,12 +48,11 @@ X = np.array(columnTransformer.fit_transform(X), dtype= np.str)
 
 # obtendo o tempo entre as duas colunas de horas 
 new_column = []
-import datetime
 for i in X[:, [-2, -1]]:
     data1 = i[0].split(':')
     data2 = i[1].split(':')
-    data1 = datetime.datetime(1, 1, 1, int(data1[0]), int(data1[1]), int(data1[2]))
-    data2 = datetime.datetime(1, 1, 1, int(data2[0]), int(data2[1]), int(data2[2]))
+    data1 = dt.datetime(1, 1, 1, int(data1[0]), int(data1[1]), int(data1[2]))
+    data2 = dt.datetime(1, 1, 1, int(data2[0]), int(data2[1]), int(data2[2]))
     seconds = (data2 - data1).total_seconds()
     new_column.append(seconds)
 
