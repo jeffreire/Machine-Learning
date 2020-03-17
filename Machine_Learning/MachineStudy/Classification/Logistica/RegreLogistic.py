@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pylab as plt
 
 # preparando os dados
-dataset = pd.read_csv('Machine_Learning/MachineStudy/Data/Social_Network_Ads.csv')
+dataset = pd.read_csv('Machine_Learning/MachineStudy/Data/.csv')
 X = dataset.iloc[:, [2,3]].values
 y = dataset.iloc[:, 4].values
 

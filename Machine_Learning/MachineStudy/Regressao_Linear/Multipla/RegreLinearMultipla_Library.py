@@ -11,7 +11,7 @@ fi_y = file.iloc[:, 4].values
 
 # Imortando a biblioteca para 'Criptogtrafar as strings da tabela'
 # Reshap transforma em  matrix dimensao -1,1
-from sklearn.preprocessing import OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder, LabelEncoder
 oneHotEncoder = OneHotEncoder(categories='auto')
 scalar_features = fi_x[:, :3]
 states = oneHotEncoder.fit_transform( fi_x[:, 3].reshape(-1,1) ).toarray()
