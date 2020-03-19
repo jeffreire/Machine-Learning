@@ -71,7 +71,7 @@ sc_x = StandardScaler().fit(X_train)
 X_train = sc_x.fit_transform(X_train)
 X_test = sc_x.transform(X_test)
 
-# algoritimo textra trees classifier
+# algoritimo extra trees classifier
 from sklearn.ensemble import ExtraTreesClassifier 
 classificationExtraTree = ExtraTreesClassifier(n_estimators= 200, random_state= 0)
 classificationExtraTree.fit(X_train, y_train)
@@ -84,19 +84,19 @@ cm = confusion_matrix(y_test, y_pred)
 print(cm)
 print('ExtraTree: {}%'.format(classificationExtraTree.score(X_test, y_test)))
 
-# algoritimo svc
-from sklearn.svm import SVC 
-classificationSVC = SVC(random_state= 0)
-classificationSVC.fit(X_train, y_train)
+# algoritimo random forest
+from sklearn.ensemble import RandomForestClassifier 
+classificationRandomForest = RandomForestClassifier(n_estimators=200, random_state= 0)
+classificationRandomForest.fit(X_train, y_train)
 # prevendo a base no teste
-y_pred = classificationSVC.predict(X_test)
+y_pred = classificationRandomForest.predict(X_test)
 
 # matriz dos erros e acertos
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 print('-------------------------')
 print(cm)
-print('SVC: {}%'.format(classificationSVC.score(X_test, y_test)))
+print('Random forest: {}%'.format(classificationRandomForest.score(X_test, y_test)))
 
 # algoritimo logistica
 from sklearn.linear_model import LogisticRegression 
