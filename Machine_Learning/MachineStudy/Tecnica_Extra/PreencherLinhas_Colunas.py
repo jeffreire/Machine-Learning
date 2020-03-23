@@ -148,3 +148,8 @@
 # # X = np.concatenate(([states_1]), axis= 1)
 
 # # X = np.concatenate( (states_1, states_2, states_3, states_5, states_7), axis=1)
+
+
+# Para consultar a quantidade de dados em uma coluna pelo name
+'''fraud= dataset[dataset['default']== False]
+credit= dataset[dataset['default']== True]'''
