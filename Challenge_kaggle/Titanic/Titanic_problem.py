@@ -6,15 +6,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
-
+ 
 def _filling_numeric_columns(dt, colum):
     mean = dt[colum].mean()
     mean = math.floor(mean)
     dt.update(dt[colum].fillna(mean))
 
 # obtendo os dados do arquivo
-train = pd.read_csv('Competicao_kaggle/Data/train.csv')
-test = pd.read_csv('Competicao_kaggle/Data/test.csv')
+train = pd.read_csv('Challenge_kaggle/Data/train.csv')
+test = pd.read_csv('Challenge_kaggle/Data/test.csv')
 
 # removendo as colunas inrrelevantes
 train.drop(['Name', 'Ticket', 'Cabin'], axis=1, inplace= True)
