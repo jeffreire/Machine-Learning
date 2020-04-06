@@ -39,7 +39,7 @@ class Conversion:
     # method that last convert the imagen for numpy array
     def _no_convert_to_array_numpy(self):
         self.imag_array = np.array(list(self.img_gray.getdata(band= 0)), float)
-        self.imag_array.shape = (self.img_gray.size[1], self.img_gray.size[0])
+        self.imag_array.shape = (self.img_gray.size[1], self.img_gray.size[0], self.img_gray.size[2])
     
     # method that apply technique SVD in image 
     def _applying_SVD_in_img(self):
@@ -57,11 +57,12 @@ class Conversion:
             reconsting = np.matrix(self.U[:, :i]) * np.diag(self.D[:i]) * np.matrix(self.V[:i,:])
             Plotting(reconsting)._plotar_with_color('gray', i)
 
-# con = Conversion('imagem')
-# s = con._open_img()
+con = Conversion('Neural_network/sunflower.jpg')
+s = con._open_img()
 # Plotting._plotar(s, 1)
-# con._convert_black_white()
-# con._no_convert_to_array_numpy()
+con._convert_black_white()
+con._no_convert_to_array_numpy()
+
 # con._applying_SVD_in_img()
 # con._reconsting_img()
 # con._reconsting_img_diferent_value()
