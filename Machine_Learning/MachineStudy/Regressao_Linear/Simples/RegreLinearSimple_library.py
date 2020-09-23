@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-arquivo = pd.read_csv('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine_Learning/MachineStudy/Data/Salary_Data.csv')
+arquivo = pd.read_csv('C:/Users/jefferson.maria/Desktop/Artificial Intelligence/Machine_Learning/MachineStudy/Data/Salary_Data.csv')
 print(arquivo)
 # Primeira coluna e todas as linhas
 x = arquivo.iloc[:, :-1].values

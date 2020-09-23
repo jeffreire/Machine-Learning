@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Importando os dados
-dataset = pd.read_csv('C:/Users/jefferson.maria/Desktop/MachineLearning/Machine_Learning/MachineStudy/Data/Position_Salaries.csv')
+dataset = pd.read_csv('C:/Users/jefferson.maria/Desktop/Projeto_kngle/Previsao/Position_Salaries.csv')
 X = dataset.iloc[:, 1:2].values
 y = dataset.iloc[:, 2].values
 
